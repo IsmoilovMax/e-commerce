@@ -24,19 +24,19 @@ const SingUpPage = () => {
     }
 
     return (
-        <Card className='w-1/2 p-4'>
+        <Card className='w-1/3 p-4'>
             <h1 className='text-xl font-bold'>Sign In</h1>
             <p className='text-sm text-muted-foreground'>
                 Welcome back! Please sign in to your account.
             </p>
-            <Separator className='my-3' />
+            <Separator className='my-1' />
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-2'>
                     <FormField
                         control={form.control}
                         name='email'
                         render={({ field }) => (
-                            <FormItem className='space-y-0'>
+                            <FormItem className='space-y-1'>
                                 <Label>Email</Label>
                                 <FormControl>
                                     <Input placeholder='email@gmail.com' {...field} />
@@ -52,13 +52,13 @@ const SingUpPage = () => {
                             <FormItem className='space-y-0'>
                                 <Label>Password</Label>
                                 <FormControl>
-                                    <Input placeholder='***' type='password' {...field} />
+                                    <Input placeholder='****' type='password' {...field} />
                                 </FormControl>
                                 <FormMessage className='text-xs text-red-500' />
                             </FormItem>
                         )}
                     />
-                    <Button type='submit'>Sumbit</Button>
+                    <Button type='submit' className='cursor-pointer'>Sumbit</Button>
                 </form>
             </Form>
 
