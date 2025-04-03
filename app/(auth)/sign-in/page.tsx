@@ -8,10 +8,12 @@ import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
 import { loginSchema, registerSchema } from '@/lib/validation'
 import { zodResolver } from '@hookform/resolvers/zod'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import favicon from '../../favicon.ico'
 
 const SingUpPage = () => {
     const form = useForm<z.infer<typeof registerSchema>>({
@@ -27,8 +29,10 @@ const SingUpPage = () => {
         <Card className='w-1/3 p-4'>
             <h1 className='text-xl font-bold'>Sign In</h1>
             <p className='text-sm text-muted-foreground'>
-                Welcome back! Please sign in to your account.
+                Welcome back! Please sign in to your account
+              
             </p>
+           
             <Separator className='my-1' />
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-2'>

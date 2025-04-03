@@ -1,21 +1,18 @@
 "use client"
 
-
-import { ModeToggle } from '@/components/ui/modeToggle'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Separator } from '@/components/ui/separator'
-import { cn } from '@/lib/utils'
 import { registerSchema } from '@/lib/validation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Link from 'next/link'
-import { useParams, useRouter, useSearchParams } from 'next/navigation'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+
 
 
 const SignUp = () => {
