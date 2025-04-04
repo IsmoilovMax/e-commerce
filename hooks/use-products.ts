@@ -1,5 +1,4 @@
 import { IProduct } from "@/types"
-import { boolean } from "zod"
 import { create } from "zustand"
 
 
@@ -12,10 +11,11 @@ type Store = {
 
 const useProduct = create<Store>()(set => ({
   product: null,
-  setProduct: product => set({product}),
+  setProduct: product => set({ product }),
   open: false,
-  setOpen: open => set({open})
+  setOpen: open => set({ open })
 }))
+
 
 
 export default useProduct
