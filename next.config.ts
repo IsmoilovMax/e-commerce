@@ -12,9 +12,9 @@ const nextConfig: NextConfig = {
       }
     ]
   },
-  experimental: {
-    dynamicIO: true
-  }
+  // experimental: {
+  //   dynamicIO: true
+  // }
 };
 
 export default nextConfig;

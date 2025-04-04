@@ -1,6 +1,4 @@
-'use client'
-
-import React from 'react'
+import React, { Suspense } from 'react'
 import axios from 'axios'
 
 
@@ -23,17 +21,21 @@ const Page = async () => {
 
   // console.log("axiosData:", dates)
   // console.log("fetchData:", posts.slice(10))
-  const { data } = await axios.get('https://api.vercel.app/blog')
+  // const { data } = await axios.get('https://api.vercel.app/blog')
+  const fetchData = await fetch(`https://api.vercel.app/blog`)
+  const post = await fetchData.json()
 
   return (
     <>
-        <ul>
-          {data.map((post: any) =>(
-            <li key={post._id}>
+       <Suspense fallback={<div>Loading...</div>}>
+       <ul>
+          {post.map((post: any) =>(
+            <li key={post.id}>
               {post.title}
             </li>
           ))}
         </ul>
+       </Suspense>
     </>
   )
 }
